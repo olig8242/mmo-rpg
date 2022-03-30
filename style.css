@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Anton', sans-serif;
+
+}
+
+:root {
+    --main-color: #337def;
+    --text-color: #337def;
+    --bg-color: #ffffff;
+    --hd-color: #2f2fa2; 
+    --big-font: 3.16rem;
+    --h5-font: 2.26rem;
+    --pp-font: 1.0rem;
+
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    }
+
+
+/* HEADER HEADER HEADER HEADER HEADER*/
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background: var(--hd-color);
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 150;
+    padding: 0 16.6%;
+    box-shadow: rgba(33,35,38,0.1) 0px 10px 10px -10px;
+
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--main-color);
+
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 15px 20px;
+    transition: color .4s;
+
+}
+
+.home1 a:hover {
+    color: white;
+}
+.home2 a:hover {
+    color: red;
+}
+.home3 a:hover {
+    color: yellow;
+}
+
+section {
+    padding: 75px 16.7%;
+}
+
+.home {
+    width: 100%;
+    min-height: 35vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+}
+
+.home-text {
+    padding-top: 50px;
+}
+
+
+.home-img img {
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+
+}
+
+.home ul li {
+    font-size: 1.4rem;
+    line-height: 2.5;
+    
+}
+
+.home-text h1{
+    margin-top: 50px;
+    color: var(--text-color);
+    line-height: 1.4;
+    margin-bottom: 25px;
+    font-size: var(--big-font);
+    margin-top: 50px;
+
+}
+
+.home-text h5 {
+    font-size: var(--h5-font);
+    font-weight:lighter;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+
+
+.home-text p {
+    max-width: 100%;
+    width: 430px;
+    font-size: var(--p-font);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.intro-intro {
+    text-align: center;
+    margin-top: -50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1;
+    grid-gap: 3rem;
+}
+
+/* 4 IMAGE BANNER 4 IMAGE BANNER 4 IMAGE BANNER */
+
+.four-images-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 100px rgb(231, 231, 231) solid;
+}
+
+.four-images-section img {
+    width: 100%;
+    height: auto;
+}
+
+/* GAMES SECTION GAMES SECTION GAMES SECTION GAMES SECTION */
+
+.game-intro {
+    display: grid;
+    align-items: center;
+}
+
+.game-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.game-intro p {
+    padding-top: 25px;
+}
+
+.game-logo img {
+    width: 450px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.game-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    width: 100%;
+
+}
+
+.game-images img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1100px) {
+    section {
+        padding: 75px 7.7%;
+    }
+}
+
+@media (max-width: 750px) {
+    .home-img img {
+        display: none;
+    }
+    .home-text {
+        text-align: center;
+    }
+    section {
+        padding: 0;
+    }
+
+    .home {
+        width: 100%;
+        min-height: 35vh;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .wow-images {
+        grid-gap: 0rem;
+    }
+
+    .wow-images img {
+        grid-gap: 0rem;
+        border-radius: 0;
+    }
+
+    .four-images-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        border-top: none;
+    }
+
+    .game-images {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 0;
+
+    }
+
+    .game-images img {
+        border-radius: 0;
+    }
+
+    .game-intro p {
+        padding: 20px 20px 30px;
+        font-size: 1em;
+        font-weight: lighter;
+    }
+}
